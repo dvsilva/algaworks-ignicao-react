@@ -1,0 +1,75 @@
+O que é react
+- criado pelo facebook em 2013
+- biblioteca de renderização de componentes
+- altemaente produtivo e performático
+- povê um ecossistema completo mantido por uma comunidade engajada
+- flexível 
+	- JSX - HMLT dentro de javascript
+	- typescript
+	- classes
+	- programação funciona
+- padronizado (ESLint, padrões da comunidade)
+- supoert (vscode, webstorm, sublime text, atom, etc)
+
+O que são componentes
+- são agrupamento de elementos
+- componentes reagem à propriedades (ex: dados e propriedades)
+
+codeopen - https://codepen.io/
+settings -> adicionar JavaScript PreProcessor (Babel) e adicionar External Scripts (react e react-dom)
+
+JSX -> escreve elemento parecido com HTML e o JSX transforma o código em React.createElement (api de nivel superior / top level API do react)
+
+https://codepen.io/danielbonifacio/pen/ZEQqGao
+https://codepen.io/dvsilva/pen/qBZgQqd
+
+ambiente - Github, VSCode, Nvm, Node, Fluent Terminal
+
+SPA (Single Page Application)
+- aplicação de página única
+- geralmente é estático (HTML estático e navegador faz o parse)
+- se comunica com o back-end por meio de uma API
+
+vantagens da SPA
+- melhora a experiência do usuário
+	- esperar a requisição de uma página inteira se somente alguns dados mudam
+	- sensação de espera é reduzida (animações técnicas como skeleton UI)
+	- é como se estivesse usando um aplicativo, só que no navegador
+- aumento de performance (carregamentos / acessos sucessivos)
+- responsabilidades divididas (front e back)
+- manutenção (ex. erro da API ou renderização de um componente de tela com problema)
+- redução de custos (bugs ficam mais facil e redução de custo com servidor)
+
+exemplos de SPA
+- netflix, gmail, youtube, googledrive, paypal
+
+onde usar
+- aplicações dinamicas visualmente (aplicação com transições)
+- aplicação que lida com grande volume e tipo de dados (gerenciamento de estado facilidado)
+- aplicações que manipulam muito o DOM (facilita a renderização dos dados)
+
+não faz muito sentido usar
+- sites institucionais (hotsites)
+
+como criar uma SPA com React -> react cli
+- gera toda a estrutura que precisamos para a nossa SPA
+- salva muito tempo
+- abstrai boa parte da lógica
+- personalizável com templates
+- não precisa instalar
+
+comandos para criar o projeto - https://create-react-app.dev/docs/getting-started/
+- criar um projeto
+npx create-react-app nome-do-app --template nome-do-template
+- criar projeto do curso 
+npx create-react-app alga-stock --template typescript
+- iniciar projeto
+cd alga-stock
+npm start ou yarn start
+
+estruturas de pastas - https://create-react-app.dev/docs/folder-structure/
+public/manifest.json -> metadados
+public/robot.txt -> metadados de indexação
+
+repositório do curso
+https://github.com/algaworks/algastock
