@@ -19,3 +19,5 @@ updating
 unmounting
 - componentWillUnmount
 
+componentes funcionais (hooks) 
+- useState

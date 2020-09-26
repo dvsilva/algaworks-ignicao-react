@@ -12,7 +12,7 @@ function App() {
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>Ola, Mundo!</p>
-        <TestComponent />
+        <TestComponent name="Danyllo" />
         <ClassComponent name="Mundo" />
         <a
           className="App-link"
