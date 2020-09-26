@@ -1,9 +1,10 @@
 import React from "react";
-import logo from "../../logo.svg";
+import logo from "./logo.svg";
 import "./App.css";
 
 // import TestComponent from "./components/TestComponent/TestComponent";
 import TestComponent from "../TestComponent";
+import ClassComponent from "../ClassComponent";
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
         <img src={logo} className="App-logo" alt="logo" />
         <p>Ola, Mundo!</p>
         <TestComponent />
+        <ClassComponent name="Mundo" />
         <a
           className="App-link"
           href="https://reactjs.org"

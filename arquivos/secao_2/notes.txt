@@ -4,3 +4,10 @@ https://pt-br.reactjs.org/docs/components-and-props.html
 Documentação da MDN sobre ESModules (import export) 
 https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Guide/M%C3%B3dulos
 
+componentes de classes
+https://pt-br.reactjs.org/docs/react-component.html
+criado antes dos hooks para usar o estado
+componentes stateful, se nao for classe era stateless
+
+
+
