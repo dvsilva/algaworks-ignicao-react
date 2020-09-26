@@ -1,13 +1,21 @@
 componentes
-Documentação do React sobre componentes 
-https://pt-br.reactjs.org/docs/components-and-props.html
-Documentação da MDN sobre ESModules (import export) 
-https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Guide/M%C3%B3dulos
+criar index.ts para exportar componente dentro da pasta correspondente
+é bom para o import também
 
 componentes de classes
-https://pt-br.reactjs.org/docs/react-component.html
 criado antes dos hooks para usar o estado
 componentes stateful, se nao for classe era stateless
 
-
+ciclo de vida componentes de classe em react
+mouting
+- constructor
+- render
+- react updates dom and refs
+- componentDidMount
+updating
+- render (new props, setState(), forceUpdate())
+- react updates dom and refs
+- componentDidUpdate
+unmounting
+- componentWillUnmount
 

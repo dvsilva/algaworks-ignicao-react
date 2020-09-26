@@ -5,7 +5,21 @@ class ClassComponent extends React.Component<{ name: string }> {
     name: "Mundo!!!",
   };
 
+  constructor(props: any) {
+    super(props);
+    console.log("constructor reached");
+  }
+
+  componentDidMount() {
+    console.log("did mount reached");
+  }
+
+  componentDidUpdate() {
+    console.log("did update reached");
+  }
+
   render() {
+    console.log("render reached");
     return (
       <div>
         <p>name: {this.state.name}</p>
