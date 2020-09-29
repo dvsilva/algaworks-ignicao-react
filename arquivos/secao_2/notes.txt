@@ -26,6 +26,8 @@ componentes funcionais (hooks)
 reset css 
 remover espaçamento padrão dos navegadores / cada navegador tem um tamanho diferente
 
+props -> maneira de passar dados do componente pai para o filho
+
 macetes
 comentar linha no vscode e arquivo tsx -> ctrl + ;
 commitar automatico -> ctrl + enter
