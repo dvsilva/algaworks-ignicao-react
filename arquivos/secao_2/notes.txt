@@ -21,3 +21,7 @@ unmounting
 
 componentes funcionais (hooks) 
 - useState
+- useEffect -> parecido componentDidMount e componentDidUpdate
+- 
+
+comentar linha no vscode e arquivo tsx -> ctrl + ;

@@ -4,7 +4,7 @@ import "./App.css";
 
 // import TestComponent from "./components/TestComponent/TestComponent";
 import TestComponent from "../TestComponent";
-import ClassComponent from "../ClassComponent";
+// import ClassComponent from "../ClassComponent";
 
 function App() {
   return (
@@ -13,7 +13,7 @@ function App() {
         <img src={logo} className="App-logo" alt="logo" />
         <p>Ola, Mundo!</p>
         <TestComponent name="Danyllo" />
-        <ClassComponent name="Mundo" />
+        {/* <ClassComponent name="Mundo" /> */}
         <a
           className="App-link"
           href="https://reactjs.org"
