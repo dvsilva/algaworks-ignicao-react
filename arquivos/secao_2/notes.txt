@@ -22,6 +22,11 @@ unmounting
 componentes funcionais (hooks) 
 - useState
 - useEffect -> parecido componentDidMount e componentDidUpdate
-- 
 
+reset css 
+remover espaçamento padrão dos navegadores / cada navegador tem um tamanho diferente
+
+macetes
 comentar linha no vscode e arquivo tsx -> ctrl + ;
+commitar automatico -> ctrl + enter
+criar lorem ipsum -> lorem20 + ctrl + espaço
