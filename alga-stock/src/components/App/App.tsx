@@ -10,7 +10,7 @@ function App() {
       <Header title="AlgaStock" />
 
       <Container>
-        <Table data={} />
+        <Table />
       </Container>
     </div>
   );
