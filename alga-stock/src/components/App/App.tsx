@@ -23,6 +23,12 @@ function App() {
       <Header title="AlgaStock" />
 
       <Container>
+        <ul>
+          {["Daniel", "Thiago", "William", "Daniel"].map((name, index) => {
+            return <li key={index}>{name}</li>;
+          })}
+        </ul>
+
         <Button content="Click me" onClick={() => window.alert("alert")} />
         <Button onClick={() => window.alert("alert button 1")}>Alert</Button>
         <Button
