@@ -30,6 +30,10 @@ props -> maneira de passar dados do componente pai para o filho
 
 rodar arquivo js -> plugin code runner
 
+estilização com sass -> npm i -D node-sass
+não roda no navegador / roda em desenv / compila para css
+&.right -> [&] acessa o pai / sem o [&] atribui aos filhos 
+
 macetes
 comentar linha no vscode e arquivo tsx -> ctrl + ;
 commitar automatico -> ctrl + enter
