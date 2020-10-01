@@ -1,7 +1,7 @@
 import React from "react";
 import Container from "../../shared/Container";
+import Table from "../../shared/Table";
 import Header from "../Header";
-import Table from "../Table";
 import "./App.css";
 
 function App() {
@@ -10,7 +10,7 @@ function App() {
       <Header title="AlgaStock" />
 
       <Container>
-        <Table data={} />
+        <Table />
       </Container>
     </div>
   );
