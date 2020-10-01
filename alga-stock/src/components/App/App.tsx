@@ -1,7 +1,7 @@
 import React from "react";
 import Container from "../../shared/Container";
+import Table from "../../shared/Table";
 import Header from "../Header";
-import Table from "../Table";
 import "./App.css";
 
 function App() {
