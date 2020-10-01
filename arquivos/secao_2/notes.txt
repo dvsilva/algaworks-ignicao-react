@@ -28,6 +28,8 @@ remover espaçamento padrão dos navegadores / cada navegador tem um tamanho dif
 
 props -> maneira de passar dados do componente pai para o filho
 
+rodar arquivo js -> plugin code runner
+
 macetes
 comentar linha no vscode e arquivo tsx -> ctrl + ;
 commitar automatico -> ctrl + enter
