@@ -1,4 +1,4 @@
-aimport React from "react";
+import React from "react";
 import "./Form.scss";
 
 declare interface FormProps {
