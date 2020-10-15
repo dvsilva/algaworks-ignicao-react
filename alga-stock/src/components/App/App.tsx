@@ -17,7 +17,7 @@ function App() {
   const [products, setProducts] = useState(Products);
 
   const handleProductSubmit = (product: ProductCreator) => {
-    console.log(product);
+    // console.log(product);
     setProducts([...products, { id: products.length + 1, ...product }]);
   };
 
@@ -26,7 +26,7 @@ function App() {
       <Header title="AlgaStock" />
 
       <Container>
-        <Table data={Products} headers={headers} />
+        <Table data={products} headers={headers} />
         <ProductForm onSubmit={handleProductSubmit} />
       </Container>
     </div>
