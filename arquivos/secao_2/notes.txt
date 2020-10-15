@@ -38,3 +38,4 @@ macetes
 comentar linha no vscode e arquivo tsx -> ctrl + ;
 commitar automatico -> ctrl + enter
 criar lorem ipsum -> lorem20 + ctrl + espaço
+formatar codigo -> botao direito no documento - format document
