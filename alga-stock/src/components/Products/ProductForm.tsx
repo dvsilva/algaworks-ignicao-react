@@ -1,7 +1,8 @@
-import React, { useState } from "react";
-import Button from "../../shared/Button";
-import Form from "../../shared/Form/Form";
+import React, { useState, useEffect } from "react";
+
+import Form from "../../shared/Form";
 import Input from "../../shared/Input";
+import Button from "../../shared/Button";
 import { Product } from "../../shared/Table/Table.mockdata";
 
 declare interface InitialFormState {
@@ -39,8 +40,13 @@ const ProductForm: React.FC<ProductFormProps> = (props) => {
 
   const [form, setForm] = useState(initialFormState);
 
+  useEffect(() => {
+    setForm(initialFormState);
+  }, [props.form]);
+
   const handleInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     const { value, name } = event.target;
+
     setForm({
       ...form,
       [name]: value,
@@ -48,36 +54,34 @@ const ProductForm: React.FC<ProductFormProps> = (props) => {
   };
 
   const updateProduct = (product: InitialFormState) => {
-    const produtDto = {
+    const productDto = {
       id: Number(product.id),
-      name: String(form.name),
-      price: parseFloat(form.price),
-      stock: Number(form.stock),
+      name: String(product.name),
+      price: parseFloat(product.price),
+      stock: Number(product.stock),
     };
 
-    props.onUpdate && props.onUpdate(produtDto);
-    setForm(initialFormState);
+    props.onUpdate && props.onUpdate(productDto);
   };
 
   const createProduct = (product: InitialFormState) => {
-    const produtDto = {
-      name: String(form.name),
-      price: parseFloat(form.price),
-      stock: Number(form.stock),
+    const productDto = {
+      name: String(product.name),
+      price: parseFloat(product.price),
+      stock: Number(product.stock),
     };
 
-    props.onSubmit && props.onSubmit(produtDto);
-    setForm(initialFormState);
+    props.onSubmit && props.onSubmit(productDto);
   };
 
   const handleFormSubmit = () => {
-    // console.log(form);
     form.id ? updateProduct(form) : createProduct(form);
+
     setForm(initialFormState);
   };
 
   return (
-    <Form title="Product form" onSubmit={handleFormSubmit}>
+    <Form onSubmit={handleFormSubmit}>
       <Input
         onChange={handleInputChange}
         value={form.name}
