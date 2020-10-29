@@ -41,7 +41,14 @@ function App() {
       <Header title="AlgaStock" />
 
       <Container>
-        <Table data={products} headers={headers} />
+        <Table
+          data={products}
+          headers={headers}
+          enableActions
+          onDelete={console.log}
+          onDetail={console.log}
+          onEdit={console.log}
+        />
         <ProductForm
           form={updatingProduct}
           onUpdate={handleProductUpdate}
