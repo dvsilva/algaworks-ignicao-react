@@ -6,3 +6,6 @@ npx create-react-app alga-stock --template typescript
 cd alga-stock
 npm start ou yarn start
 
+Tecnologias
+React
+Axios
