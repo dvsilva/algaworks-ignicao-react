@@ -41,3 +41,15 @@ rodar api -> npm start
 
 swagger editor (https://editor.swagger.io/)
 copiar conteudo do arquivo -> https://github.com/algaworks/api-alga-stock/blob/master/openapi.yaml
+
+mock -> conteudo de placeholder / dados de teste / dados estaticos
+mockdata -> dados mockados
+mockserver -> prove os dados de teste / não persiste dados / ajuda no teste da unidade de requisição
+
+openapi 
+- documentação padronizada de como a api deve se comportar
+- fiel ao produto final
+- ocorre em algumas versões / open api v3
+
+instalar o mockserver prism -> npm install -g @stoplight/prism-cli
+iniciar um mockserver a partir de um yaml -> prism mock openapi.yaml
