@@ -1,9 +1,10 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Swal from "sweetalert2";
+import { getAllProducts } from "../../services/Products.service";
 
 import Container from "../../shared/Container";
 import Table, { TableHeader } from "../../shared/Table";
-import Products, { Product } from "../../shared/Table/Table.mockdata";
+import { Product } from "../../shared/Table/Table.mockdata";
 import Header from "../Header";
 import ProductForm, { ProductCreator } from "../Products/ProductForm";
 import "./App.css";
@@ -16,11 +17,21 @@ const headers: TableHeader[] = [
 ];
 
 function App() {
-  const [products, setProducts] = useState(Products);
+  // const [products, setProducts] = useState([Products]);
+  const [products, setProducts] = useState<Product[]>([]);
 
   const [updatingProduct, setUpdatingProduct] = useState<Product | undefined>(
     products[0]
   );
+
+  useEffect(() => {
+    async function fetchData() {
+      const _products = await getAllProducts();
+      setProducts(_products);
+    }
+
+    fetchData();
+  }, []);
 
   const handleProductSubmit = (product: ProductCreator) => {
     // console.log(product);
