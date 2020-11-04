@@ -32,3 +32,12 @@ fetch('https://jsonplaceholder.typicode.com/posts',{
 instalar axios no projeto
 yarn add axios ou npm i axios
 
+adicionar projeto backend (https://github.com/algaworks/api-alga-stock)
+clonar projeto -> git clone https://github.com/algaworks/api-alga-stock.git
+instalar dependencias -> npm i
+criar arquivo .env na raiz do projeto
+rodar configuração de banco de dados -> npm run setup
+rodar api -> npm start
+
+swagger editor (https://editor.swagger.io/)
+copiar conteudo do arquivo -> https://github.com/algaworks/api-alga-stock/blob/master/openapi.yaml
