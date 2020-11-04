@@ -35,14 +35,17 @@ function App() {
 
   const handleProductSubmit = (product: ProductCreator) => {
     // console.log(product);
-    setProducts([...products, { id: products.length + 1, ...product }]);
+    setProducts([
+      ...products,
+      { _id: String(products.length + 1), ...product },
+    ]);
   };
 
   const handleProductUpdate = (newProduct: Product) => {
     // console.log(newProduct);
     setProducts(
       products.map((product) =>
-        product.id === newProduct.id ? newProduct : product
+        product._id === newProduct._id ? newProduct : product
       )
     );
 
@@ -54,9 +57,9 @@ function App() {
     setUpdatingProduct(product);
   };
 
-  const deleteProduct = (id: Number) => {
+  const deleteProduct = (id: string) => {
     console.log(id);
-    setProducts(products.filter((product) => product.id !== id));
+    setProducts(products.filter((product) => product._id !== id));
   };
 
   const handleProductDelete = (product: Product) => {
@@ -71,7 +74,7 @@ function App() {
     }).then((result: any) => {
       if (result.value) {
         //console.log("confirmed");
-        deleteProduct(product.id);
+        deleteProduct(product._id);
         Swal.fire("Deleted!", "Your file has been deleted.", "success");
       }
     });
