@@ -1,0 +1,22 @@
+redux - gerenciamento de estado dentro do react
+componentes aninhados repassar dados torna-se complexo (macarrão) atraves de props
+datastore (redux) -> fonte unica de dados (SSOT)
+permite fornecer arquivos para diversos componentes
+
+fluxo (padrão publish-subscribe)
+- componente se inscreve para receber mudanças
+- componente recebe os dados via props
+- componente dispara uma ação (como um método) eventos, ciclo de vida, etc
+- action retorna um objeto (type, payload)
+- reducer recebe dados da action
+- reducer retorna o novo estado da store
+- datastore repassa os dados para o componente que se inscreveu
+
+one direction dataflow - fluxo de dados unidirecional
+
+vantagens
+- manutenção
+- direcionamento único de dados
+- fonte única da verdade
+- ajuda a controlar a UI
+- persistência de dados

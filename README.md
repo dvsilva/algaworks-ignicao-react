@@ -13,3 +13,5 @@ Tecnologias
 - Swal
 - Fetch API
 - Axios
+- Prism
+- Redux
