@@ -32,5 +32,3 @@ https://github.com/zalmoxisus/redux-devtools-extension
 actions assincronas -> actions precisam ser objetos para actions assincronas precisa de um middleware
 adicionar redux thunk (https://github.com/reduxjs/redux-thunk)
 yarn add redux-thunk ou npm i redux-thunk
-
-
