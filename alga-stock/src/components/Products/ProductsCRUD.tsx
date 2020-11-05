@@ -5,7 +5,7 @@ import Swal from "sweetalert2";
 import {
   createSingleProduct,
   deleteSingleProduct,
-  // getAllProducts,
+  getAllProducts,
   updateSingleProduct,
 } from "../../services/Products.service";
 
@@ -26,15 +26,15 @@ declare interface ProductsCRUDProps {
 
 const ProductsCRUD: React.FC<ProductsCRUDProps> = (props) => {
   // const [products, setProducts] = useState([Products]);
-  // const [products, setProducts] = useState<Product[]>([]);
+  const [products, setProducts] = useState<Product[]>([]);
 
   const [updatingProduct, setUpdatingProduct] = useState<Product | undefined>(
-    undefined
+    products[0]
   );
 
   async function fetchData() {
-    // const _products = await getAllProducts();
-    // setProducts(_products);
+    const _products = await getAllProducts();
+    setProducts(_products);
   }
 
   useEffect(() => {
@@ -121,7 +121,7 @@ const ProductsCRUD: React.FC<ProductsCRUDProps> = (props) => {
   return (
     <>
       <Table
-        data={props.products}
+        data={products}
         headers={headers}
         enableActions
         onDelete={handleProductDelete}
