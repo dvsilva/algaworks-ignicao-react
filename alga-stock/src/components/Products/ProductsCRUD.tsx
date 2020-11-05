@@ -6,7 +6,7 @@ import { Product } from "../../shared/Table/Table.mockdata";
 import Table, { TableHeader } from "../../shared/Table";
 import ProductForm, { ProductCreator } from "../Products/ProductForm";
 import * as ProductsAction from "../../redux/Products/Products.action";
-import { RootState } from "../../redux";
+import { RootState, ThunkDispatch } from "../../redux";
 
 const headers: TableHeader[] = [
   { key: "id", value: "#" },
@@ -20,82 +20,37 @@ declare interface ProductsCRUDProps {
 }
 
 const ProductsCRUD: React.FC<ProductsCRUDProps> = (props) => {
-  const dispatch = useDispatch();
+  const dispatch: ThunkDispatch = useDispatch();
 
-  // const [products, setProducts] = useState([Products]);
-  // const [products, setProducts] = useState<Product[]>([]);
+  const showErrorAlert = (err: Error) =>
+    Swal.fire("Oops!", err.message, "error");
 
   const [updatingProduct, setUpdatingProduct] = useState<Product | undefined>(
     undefined
   );
 
-  async function fetchData() {
-    // const _products = await getAllProducts();
-    // setProducts(_products);
-
-    try {
-      await dispatch(ProductsAction.getProducts());
-      // Swal.fire("Uhul!", "Fetch done", "success");
-    } catch (err) {
-      Swal.fire("Oops!", err.message, "error");
-    }
-  }
-
   useEffect(() => {
     fetchData();
   }, []);
 
+  async function fetchData() {
+    dispatch(ProductsAction.getProducts()).catch(showErrorAlert);
+  }
+
   const handleProductSubmit = async (product: ProductCreator) => {
-    // console.log(product);
-    /**
-    setProducts([
-      ...products,
-      { _id: String(products.length + 1), ...product },
-    ]);
-     */
-    try {
-      // await createSingleProduct(product);
-      dispatch(ProductsAction.insertNewProduct(product));
-      // fetchData();
-    } catch (err) {
-      Swal.fire("Oops!", err.message, "error");
-    }
+    dispatch(ProductsAction.insertNewProduct(product)).catch(showErrorAlert);
   };
 
   const handleProductUpdate = async (newProduct: Product) => {
-    // console.log(newProduct);
-    /**
-    setProducts(
-      products.map((product) =>
-        product._id === newProduct._id ? newProduct : product
-      )
-    );
-    */
-    try {
-      await dispatch(ProductsAction.updateProduct(newProduct));
-      setUpdatingProduct(undefined);
-      // fetchData();
-    } catch (err) {
-      Swal.fire("Oops!", err.message, "error");
-    }
-  };
-
-  const handleProductEdit = (product: Product) => {
-    // console.table(product);
-    setUpdatingProduct(product);
+    await dispatch(ProductsAction.updateProduct(newProduct))
+      .then(() => setUpdatingProduct(undefined))
+      .catch(showErrorAlert);
   };
 
   const deleteProduct = async (id: string) => {
-    // console.log(id);
-    // setProducts(products.filter((product) => product._id !== id));
-
-    try {
-      await dispatch(ProductsAction.deleteProduct(id));
-      // fetchData();
-      Swal.fire("Uhul!", "Product successfully deleted", "success");
-    } catch (err) {
-      Swal.fire("Oops!", err.message, "error");
-    }
+    dispatch(ProductsAction.deleteProduct(id))
+      .then(() => Swal.fire("Uhul!", "Product successfully deleted", "success"))
+      .catch(showErrorAlert);
   };
 
   const handleProductDelete = (product: Product) => {
@@ -107,12 +62,7 @@ const ProductsCRUD: React.FC<ProductsCRUDProps> = (props) => {
       confirmButtonColor: "#09f",
       cancelButtonColor: "#d33",
       confirmButtonText: `Yes, delete ${product.name}!`,
-    }).then((result: any) => {
-      if (result.value) {
-        //console.log("confirmed");
-        deleteProduct(product._id);
-      }
-    });
+    }).then(({ value }) => value && deleteProduct(product._id));
   };
 
   const handleProductDetail = (product: Product) => {
@@ -131,7 +81,7 @@ const ProductsCRUD: React.FC<ProductsCRUDProps> = (props) => {
         enableActions
         onDelete={handleProductDelete}
         onDetail={handleProductDetail}
-        onEdit={handleProductEdit}
+        onEdit={setUpdatingProduct}
       />
       <ProductForm
         form={updatingProduct}
