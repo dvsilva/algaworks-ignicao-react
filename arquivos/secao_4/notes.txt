@@ -24,3 +24,8 @@ vantagens
 instalação do redux
 yarn add react-redux redux ou npm i react-redux redux
 yarn add -D @types/react-redux npm i -D @types/react-redux 
+
+ferramenta redux dev tools para chrome
+https://chrome.google.com/webstore/detail/redux-devtools/lmhkpmbekcpmknklioeibfkpmmfibljd/related?hl=pt-BR
+https://github.com/zalmoxisus/redux-devtools-extension
+
