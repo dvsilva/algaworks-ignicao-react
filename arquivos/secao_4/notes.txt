@@ -20,3 +20,7 @@ vantagens
 - fonte única da verdade
 - ajuda a controlar a UI
 - persistência de dados
+
+instalação do redux
+yarn add react-redux redux ou npm i react-redux redux
+yarn add -D @types/react-redux npm i -D @types/react-redux 

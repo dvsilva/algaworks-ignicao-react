@@ -3,7 +3,8 @@ import axios from 'axios';
 // const http = axios.create({baseURL: 'https://jsonplaceholder.typicode.com'});
 // const http = axios.create({baseURL: 'http://localhost:3024'});
 const http = axios.create({
-  baseURL: 'http://localhost:4010', 
+  // baseURL: 'http://localhost:4010', // mockserver
+  baseURL: 'http://localhost:3024', // API local 
   headers: {
     authorization: 'Bearer 123'
   }
