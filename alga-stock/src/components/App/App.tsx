@@ -1,8 +1,9 @@
 import React from "react";
 import "./App.css";
+import { BrowserRouter, Switch, Route } from "react-router-dom";
 
 import HomeView from "../../views/HomeView";
-import { BrowserRouter, Switch, Route } from "react-router-dom";
+import NotFoundView from "../../views/NotFoundView";
 
 function App() {
   return (
@@ -10,6 +11,7 @@ function App() {
       <BrowserRouter>
         <Switch>
           <Route path="/" exact component={HomeView} />
+          <Route component={NotFoundView} />
         </Switch>
       </BrowserRouter>
     </div>
