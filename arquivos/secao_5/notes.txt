@@ -1,0 +1,24 @@
+roteamento - introdução às views e rotas personalizadas
+https://reactrouter.com/
+
+porque usamos o react router?
+- abstrai a lógica de renderização com base em URL
+- API simples com base em componentes
+- manipula o window.history
+- amplamente testado
+- maiorida dos projetos em produção utilizam ele
+- recomendado pelo time do facebook
+
+como ele funciona
+- carrega a página
+- carrega a aplicação até o componente do Router
+- verifica qual o path (URL) atual
+- procura a rota para aquele path especifico
+- caso exista, ele exibe. do contrário, página 404
+
+essência: montar e desmontar componentes com base na rota que ele acessa
+
+instalação react router 
+npm i react-router-dom ou yarn add react-router-dom
+instalando types
+npm i -D @types/react-router-dom ou yarn add -D @types/react-router-dom
