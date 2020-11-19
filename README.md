@@ -14,5 +14,5 @@ Tecnologias
 - Fetch API
 - Axios
 - Prism
-- Redux
+- Redux (thunk e persist)
 - React Router DOM

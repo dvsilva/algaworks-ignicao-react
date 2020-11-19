@@ -22,3 +22,6 @@ instalação react router
 npm i react-router-dom ou yarn add react-router-dom
 instalando types
 npm i -D @types/react-router-dom ou yarn add -D @types/react-router-dom
+
+instalando redux persist -> ferramenta para persistir os dados / armazenados na aplicação
+npm i redux-persist ou yarn add redux-persist
