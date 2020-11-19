@@ -16,3 +16,4 @@ Tecnologias
 - Prism
 - Redux (thunk e persist)
 - React Router DOM
+- HOC (High Order Component)
