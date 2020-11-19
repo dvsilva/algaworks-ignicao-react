@@ -2,15 +2,27 @@ import React, { useState } from "react";
 import Button from "../../shared/Button";
 import Form from "../../shared/Form";
 import Input from "../../shared/Input";
+import * as AuthenticationAction from "../../redux/Authentication/Authentication.action";
+import { useDispatch } from "react-redux";
+import { ThunkDispatch } from "../../redux";
+import Swal from "sweetalert2";
 
 const LoginForm = () => {
+  const dispatch: ThunkDispatch = useDispatch();
+
   const [form, setForm] = useState({
     user: "",
-    password: "",
+    pass: "",
   });
 
-  const handleLogin = () => {
-    console.table(form);
+  const handleLogin = async () => {
+    // console.table(form);
+
+    try {
+      await dispatch(AuthenticationAction.login(form));
+    } catch (err) {
+      Swal.fire("Error", err.response?.data?.message || err.message, "error");
+    }
   };
 
   const handleInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
@@ -35,7 +47,7 @@ const LoginForm = () => {
         type="password"
         name="password"
         label="Password"
-        value={form.password}
+        value={form.pass}
         onChange={handleInputChange}
       />
       <Button>Login</Button>
