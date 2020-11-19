@@ -26,5 +26,8 @@ npm i -D @types/react-router-dom ou yarn add -D @types/react-router-dom
 instalando redux persist -> ferramenta para persistir os dados / armazenados na aplicação
 npm i redux-persist ou yarn add redux-persist
 
+High Order Components
+- começa com with no nome do arquivo
+
 atalhos
 ctrl + b -> esconde barra lateral do vscode
