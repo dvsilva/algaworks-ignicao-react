@@ -45,7 +45,7 @@ const LoginForm = () => {
       />
       <Input
         type="password"
-        name="password"
+        name="pass"
         label="Password"
         value={form.pass}
         onChange={handleInputChange}
