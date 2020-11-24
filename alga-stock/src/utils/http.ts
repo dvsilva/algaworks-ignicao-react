@@ -6,7 +6,8 @@ import {store} from '../redux';
 
 const http = axios.create({
   // baseURL: 'http://localhost:4010', // mockserver
-  baseURL: 'http://localhost:3024', // API local 
+  // baseURL: 'http://localhost:3024', // API local 
+  baseURL: 'http://nyl-api-alga-stock.herokuapp.com' // API Heroku
   // headers: {
   //   authorization: 'Bearer 123'
   // }
