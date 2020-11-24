@@ -15,3 +15,18 @@ build
 webpack -> responsável por gerar o bundle das apps para rodar nos clientes
 babel -> codifica em next-gen js e ele transforma em js compativel (vanilla js)
 sass -> preprocessador de css
+
+gerando build
+npm run build ou yarn run build
+
+arquivos da pasta build/static/js
+arquivo chunk.js -> contem app minificada
+arquivo chunk.map.js 
+  - usado para debugar pois tem a especificação das linhas da app 
+  - pode ser deletado
+  - também gerado para a pasta css
+  - para não gerar os arquivos map adicionar arquivo .env com conteudo GENERATE_SOURCEMAP=false
+
+rodar aplicação do build localmente
+instalar dependencia serve -> npm i -g serve ou yarn global add serve
+rodar app -> serve -s build
