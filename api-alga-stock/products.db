@@ -1,0 +1,3 @@
+{"name":"Detergent ui ui","price":1.75,"stock":50,"_id":"7fXLV1CzPtlvqhvd","createdAt":{"$$date":1604499764676},"updatedAt":{"$$date":1604595754979}}
+{"name":"Cookie","price":1.52,"stock":202,"_id":"OgNG6HSTPbmtn2kS","createdAt":{"$$date":1604499764676},"updatedAt":{"$$date":1604596983753}}
+{"name":"Shrimp pack2","price":22.5,"stock":3,"_id":"szGcbXynfEMRQl04","createdAt":{"$$date":1604499764676},"updatedAt":{"$$date":1604596977093}}
