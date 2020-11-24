@@ -44,3 +44,16 @@ sugestão: iniciar projetos com react-scripts e algum momento faz o eject
 
 executar eject -> npm run eject
 (deve estar tudo commitado)
+
+adicionar projeto no github
+git remote add github https://github ..
+git remote -v
+git status
+git push github master
+
+netlify
+- fazer login
+- criar app
+- conectar com o github
+- configurar branch, comando e pasta
+- mudar o nome da app
