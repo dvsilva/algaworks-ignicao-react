@@ -1,0 +1,17 @@
+desenvolvimento
+- hot reloading (sass/css, react, babel)
+- debugging map (tela branca com especificação do erro)
+- validação de tipagem
+- análise e correção do código (Linting) [padronizar código]
+- servidor de desenvolvimento
+
+build
+- minificar arquivos 
+  - empacotar somente o que for usado
+  - compilar scss em css
+- gerar o bundle final otimizado
+- código estático transpilado
+
+webpack -> responsável por gerar o bundle das apps para rodar nos clientes
+babel -> codifica em next-gen js e ele transforma em js compativel (vanilla js)
+sass -> preprocessador de css
