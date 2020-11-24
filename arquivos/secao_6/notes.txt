@@ -57,3 +57,13 @@ netlify
 - conectar com o github
 - configurar branch, comando e pasta
 - mudar o nome da app
+
+próximos passos
+- frontend
+  - criar própria aplicação
+  - se desafie / não tenha medo
+  - se aprofundar no css (sass, styled components)
+  - aprenda design patterns
+  - aprenda outro framework: angular e vuejs
+- full stack
+  - aprenda backend (especialista spring rest)
