@@ -30,3 +30,17 @@ arquivo chunk.map.js
 rodar aplicação do build localmente
 instalar dependencia serve -> npm i -g serve ou yarn global add serve
 rodar app -> serve -s build
+
+eject 
+- é uma forma de remover o react-scripts e estar utilizando o webpack diretamente
+- time do facebook deve dar suporte a varias coisas, mas são seletos na seleção. ex: alias 
+- você tem o controle (utilizar uma feature que o react-scripts não suporta)
+desvantagens
+- webpack tem muito arquivo de configuração
+- atualização deve ser feita por voce
+- eject é irreversível (praticamente)
+
+sugestão: iniciar projetos com react-scripts e algum momento faz o eject
+
+executar eject -> npm run eject
+(deve estar tudo commitado)
