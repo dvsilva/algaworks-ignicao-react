@@ -1,3 +1,9 @@
 {"name":"Detergent ui ui","price":1.75,"stock":50,"_id":"7fXLV1CzPtlvqhvd","createdAt":{"$$date":1604499764676},"updatedAt":{"$$date":1604595754979}}
 {"name":"Cookie","price":1.52,"stock":202,"_id":"OgNG6HSTPbmtn2kS","createdAt":{"$$date":1604499764676},"updatedAt":{"$$date":1604596983753}}
 {"name":"Shrimp pack2","price":22.5,"stock":3,"_id":"szGcbXynfEMRQl04","createdAt":{"$$date":1604499764676},"updatedAt":{"$$date":1604596977093}}
+{"name":"Detergent","price":1.75,"stock":50,"_id":"7fXLV1CzPtlvqhvd","createdAt":{"$$date":1604499764676},"updatedAt":{"$$date":1606307682693}}
+{"name":"Shrimp pack","price":22.5,"stock":3,"_id":"szGcbXynfEMRQl04","createdAt":{"$$date":1604499764676},"updatedAt":{"$$date":1606307687034}}
+{"name":"Apple","price":0.8,"stock":100,"_id":"6dzvM4AgtYg5HITH","createdAt":{"$$date":1606307707559},"updatedAt":{"$$date":1606307707559}}
+{"name":"Milk","price":2.5,"stock":50,"_id":"ePdorbftnYyEUrq6","createdAt":{"$$date":1606307716606},"updatedAt":{"$$date":1606307716606}}
+{"name":"Monitor","price":440,"stock":10,"_id":"UgnXKxHMthB73HXP","createdAt":{"$$date":1606307726632},"updatedAt":{"$$date":1606307726632}}
+{"name":"Carrot","price":0.5,"stock":120,"_id":"897ZAYc18v1fW1Vc","createdAt":{"$$date":1606307740662},"updatedAt":{"$$date":1606307740662}}
