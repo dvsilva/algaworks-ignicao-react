@@ -18,6 +18,7 @@ Tecnologias
 - React Router DOM
 - HOC (High Order Component)
 - Deploy Netlify
+- Pagination
 
 Link online
 https://nyl-alga-stock.netlify.app/

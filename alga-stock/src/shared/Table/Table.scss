@@ -67,6 +67,8 @@ table.AppTable {
     text-decoration: none;
     font-size: 12px;
 
+    margin-top: 7px;
+
     &:not(:last-child) {
       margin-right: 5px;
     }
@@ -81,7 +83,7 @@ table.AppTable {
       transform: translateY(-3px);
     }
 
-    &:selected {
+    &.selected {
       color: #222;
       opacity: 0.5;
       cursor: default;

@@ -1,0 +1,3 @@
+adicionar pacote para query strings
+npm install query-string e yarn add query-string
+
