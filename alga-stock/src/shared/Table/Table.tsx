@@ -1,4 +1,5 @@
 import React from "react";
+import { NavLink } from "react-router-dom";
 import organizeData from "../../utils/organizeDataForTable";
 import Button from "../Button";
 import "./Table.scss";
@@ -24,69 +25,88 @@ const Table: React.FC<TableProps> = (props) => {
     props.headers
   );
 
-  return (
-    <table className="AppTable">
-      <thead>
-        <tr>
-          {props.headers.map((header) => (
-            <th className={header.right ? "right" : ""} key={header.key}>
-              {header.value}
-            </th>
-          ))}
-          {props.enableActions && <th className="right">Actions</th>}
-        </tr>
-      </thead>
+  const page = 2;
 
-      <tbody>
-        {organizedData.map((row, index) => {
-          return (
-            <tr key={index}>
-              {Object.keys(row).map((item, index) =>
-                item !== "$original" ? (
-                  <td
-                    key={row.$original._id + index}
-                    className={indexedHeaders[item].right ? "right" : ""}
-                  >
-                    {row[item]}
+  return (
+    <>
+      <table className="AppTable">
+        <thead>
+          <tr>
+            {props.headers.map((header) => (
+              <th className={header.right ? "right" : ""} key={header.key}>
+                {header.value}
+              </th>
+            ))}
+            {props.enableActions && <th className="right">Actions</th>}
+          </tr>
+        </thead>
+
+        <tbody>
+          {organizedData.map((row, index) => {
+            return (
+              <tr key={index}>
+                {Object.keys(row).map((item, index) =>
+                  item !== "$original" ? (
+                    <td
+                      key={row.$original._id + index}
+                      className={indexedHeaders[item].right ? "right" : ""}
+                    >
+                      {row[item]}
+                    </td>
+                  ) : null
+                )}
+                {props.enableActions && (
+                  <td className="actions right">
+                    {props.onEdit && (
+                      <Button
+                        onClick={() =>
+                          props.onEdit && props.onEdit(row.$original)
+                        }
+                      >
+                        Edit
+                      </Button>
+                    )}
+                    {props.onDetail && (
+                      <Button
+                        onClick={() =>
+                          props.onDetail && props.onDetail(row.$original)
+                        }
+                      >
+                        Detail
+                      </Button>
+                    )}
+                    {props.onDelete && (
+                      <Button
+                        onClick={() =>
+                          props.onDelete && props.onDelete(row.$original)
+                        }
+                      >
+                        Delete
+                      </Button>
+                    )}
                   </td>
-                ) : null
-              )}
-              {props.enableActions && (
-                <td className="actions right">
-                  {props.onEdit && (
-                    <Button
-                      onClick={() =>
-                        props.onEdit && props.onEdit(row.$original)
-                      }
-                    >
-                      Edit
-                    </Button>
-                  )}
-                  {props.onDetail && (
-                    <Button
-                      onClick={() =>
-                        props.onDetail && props.onDetail(row.$original)
-                      }
-                    >
-                      Detail
-                    </Button>
-                  )}
-                  {props.onDelete && (
-                    <Button
-                      onClick={() =>
-                        props.onDelete && props.onDelete(row.$original)
-                      }
-                    >
-                      Delete
-                    </Button>
-                  )}
-                </td>
-              )}
-            </tr>
-          );
-        })}
-      </tbody>
-    </table>
+                )}
+              </tr>
+            );
+          })}
+        </tbody>
+      </table>
+      <div className="Table__Pagination">
+        {Array(10)
+          .fill("")
+          .map((_, i) => {
+            return (
+              <NavLink
+                activeClassName="selected"
+                isActive={() => page === i + 1}
+                to={`/products?page=${i + 1}`}
+              >
+                {i + 1}
+              </NavLink>
+            );
+          })}
+      </div>
+    </>
   );
 };
 
