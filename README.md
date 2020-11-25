@@ -12,11 +12,12 @@ Projeto - AlgaStock - Projeto para cadastro e gerenciamento de produtos em um es
 
 ![Projeto - AlgaStock - Demonstração em Gif Animado](demo/demo.gif)
 
-Acesso ao frontend e backend online
-[Frontend AlgaStock - Netlify](https://nyl-alga-stock.netlify.app/)
-[Backend AlgaStock - Heroku](https://nyl-api-alga-stock.herokuapp.com/)
+## 🌏 Projeto online
 
-Credenciais:
+- [Frontend AlgaStock - Netlify](https://nyl-alga-stock.netlify.app/)
+- [Backend AlgaStock - Heroku](https://nyl-api-alga-stock.herokuapp.com/)
+
+## 🔒 Credenciais
 
 - Admininstrador: usuário `daniel` e senha `123`
 - Comum: usuário `joselito` e senha `321`
