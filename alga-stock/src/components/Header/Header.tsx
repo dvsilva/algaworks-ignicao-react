@@ -27,7 +27,7 @@ const Header: React.FC<HeaderProps> = (props) => {
       showCancelButton: true,
       confirmButtonColor: "#09f",
       cancelButtonColor: "#d33",
-    }).then(({ value }) => value && dispatch(logout));
+    }).then(({ value }) => value && dispatch(logout()));
   };
 
   const handleLoginLogout = () => {
