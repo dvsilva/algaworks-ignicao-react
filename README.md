@@ -2,9 +2,9 @@
 
 Descrição: Aprenda a desenvolver aplicações front-end com React do zero ao intermediário do jeito certo.
 
-Link: 🔗[Curso Ignição Reack Algaworks](https://cafe.algaworks.com/fpigr-pv1/)
+Link: 🔗[Curso Ignição React by Algaworks](https://cafe.algaworks.com/fpigr-pv1/)
 
-## 💻 Projetos do curso
+## 💻 Projeto do curso
 
 Projeto - AlgaStock - Projeto para cadastro e gerenciamento de produtos em um estoque. Envolve autenticação de usuários com restrição de visualização.
 
@@ -23,8 +23,6 @@ Projeto - AlgaStock - Projeto para cadastro e gerenciamento de produtos em um es
 - Comum: usuário `joselito` e senha `321`
 
 ## :rocket: Conceitos e tecnologias
-
-Tecnologias
 
 ✔️ React
 
