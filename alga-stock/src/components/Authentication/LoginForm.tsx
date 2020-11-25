@@ -6,6 +6,7 @@ import * as AuthenticationAction from "../../redux/Authentication/Authentication
 import { useDispatch } from "react-redux";
 import { ThunkDispatch } from "../../redux";
 import Swal from "sweetalert2";
+import { useHistory } from "react-router-dom";
 
 const LoginForm = () => {
   const dispatch: ThunkDispatch = useDispatch();
@@ -15,11 +16,14 @@ const LoginForm = () => {
     pass: "",
   });
 
+  const history = useHistory();
+
   const handleLogin = async () => {
     // console.table(form);
 
     try {
       await dispatch(AuthenticationAction.login(form));
+      history.push("/");
     } catch (err) {
       Swal.fire("Error", err.response?.data?.message || err.message, "error");
     }
